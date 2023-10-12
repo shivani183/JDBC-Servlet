@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>AAServletContextApp</display-name>
+ <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Registration Page</title>
+</head>
+<body>
+	<center>
+		<h1>KRISHNA  PRIVATE LIMITED</h1>
+		<form method="POST" action="./test">
+			<table>
+				<tr>
+					<th>NAME</th>
+					<td>
+						<input type='text' name='username'/>
+					</td> 
+				</tr>
+				<tr>
+					<th>CITY</th>
+					<td>
+						<input type='text' name='usecity'/>
+					</td> 
+				</tr>
+				<tr>
+					<th>AGE</th>
+					<td>
+						<input type='text' name='userage'/>
+					</td> 
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<input type='submit' value='reg'/>
+					</td> 
+				</tr>
+			</table>
+
+		</form>
+	</center>
+</body>
+</html>
+  <context-param>
+    <param-name>jdbcUrl</param-name>
+    <param-value>jdbc:mysql:///school</param-value>
+  </context-param>
+  <context-param>
+    <param-name>user</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <tr>
+					<th>NAME</th>
+					<td>
+						<input type='text' name='username'/>
+					</td> 
+				</tr>
+  </context-param>
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>krishna.controller.TestServlet</servlet-class>
+    <load-on-startup>6</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <servlet-name>dispController</servlet-name>
+    <servlet-class>krishna.controller.dispController</servlet-class>
+    <load-on-startup>5</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dispController</servlet-name>
+    <url-pattern>/disp</url-pattern>
+  </servlet-mapping>
+</web-app>
